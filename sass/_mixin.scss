@@ -1,0 +1,43 @@
+%grid25{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25%  25% 25% 25% ;
+    grid-column-gap: 25px;
+}
+%grid33{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 33%  33% 33%  ;
+    grid-column-gap: 25px;
+}
+@mixin grids($column1,$column2, $align-items,$width) {
+    display: grid;
+    grid-template-columns: $column1 $column2  ; 
+    grid-column-gap: 25px;
+    align-items: $align-items;
+    width: $width;
+    margin: 0 auto;
+}
+
+@mixin backgroundImg ($src,$imgSize,$repeat){
+    background-image: url($src);
+    background-size: $imgSize;
+    background-repeat:$repeat;
+    
+}
+@mixin nav($decoration,$font_color,$display) { 
+    text-decoration: $decoration;
+    color: $font_color;
+    display: $display;
+    padding: 10px ;
+}
+@mixin button_style($radius,$color,$image) {
+    border-radius: $radius;
+    background-color:$color;
+    background-image:url($image);
+    padding: 10px;
+
+}
+
+
+// ------unique features----

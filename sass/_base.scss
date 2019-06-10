@@ -1,0 +1,218 @@
+body{
+	margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.banner{
+    @include backgroundImg ($banner_bg,cover,no-repeat);
+    .header{
+        @include grids(20%,70%,center,90%);
+        .logo{
+            @include backgroundImg ($logo,cover,no-repeat);
+            width: 135px;
+            height: 40px; 
+            display: $inline;
+        }
+        .nav {
+          text-transform:url($uper_case);
+       
+          ul{
+            display: $flex;
+            li{
+                list-style: $li_styleNone;
+                padding-right: 40px;
+                a{
+                    @include nav(none,white,flex) ;
+                  }
+            }
+
+          }
+        }
+    }
+
+    .banner_body{
+       @include  grids(30%,40%,center ,80%);
+       grid-column-gap: 200px;
+       color: $white_font;
+       .right_side{
+         .headline{
+            text-transform:url($uper_case);
+            font-size: $head_fontSize; 
+           }
+           button{
+            @include  button_style(12 px,white,none)
+           }
+       }
+        .left_side{
+            @include backgroundImg ($left_side,cover,no-repeat);
+            height:795px;
+            width: 350px;
+        }
+    }
+   
+}
+
+// ----Unique features---
+.Unique{
+    
+.top{
+    text-align: center;
+    .Un_headline{
+        font-size: $head_fontSize; 
+    }
+}
+.Un_grid{
+    @extend %grid25;
+    margin: $center;
+    margin-bottom: 60px;
+    .parts{
+        background-color: white;
+        box-shadow: $shadows;
+        padding: 10px;
+        margin-bottom: 50px;
+        .parts_icon{
+            width: 50px;
+            height: 50px;
+            margin-left: 0px;
+            @include backgroundImg ($migic_icon,cover,no-repeat);
+            
+        }
+    }
+    
+}
+
+}
+
+// ----third section (we believe two mobile)---
+.third{
+    @include grids(50%,50%,center,90%);
+    background-color: #eaf5f5;
+    padding: 20px;
+
+    .third_img{
+        display:$inline;
+        @include backgroundImg ($img_third,cover,no-repeat);
+        width: 470px;
+        height: 400px;
+    }
+    .third_text{
+        padding: 30px;
+        .headline{
+            font-size: $head_fontSize;
+        }
+        .button_bg{
+            @include  button_style(12 px,white,$button_bg);
+        }
+    }
+}
+
+
+// ----fourth section (we believe one mobile)---
+.fourth{
+    @include grids(50%,50%,center,90%);
+    padding: 20px;
+    .fourth_text{
+        padding: 30px;
+        .headline{
+            font-size: $head_fontSize;
+        }
+        .button_bg{
+            @include  button_style(12 px,white,$button_bg);
+        }
+    }
+    .fourth_img{
+        display:$inline;
+        @include backgroundImg ($img_fourth,cover,no-repeat);
+        width: 470px;
+        height: 400px;
+    }
+}
+
+// ----video----
+.video_sec{
+    @include backgroundImg ($video_img,cover,no-repeat);
+    height: 281px;
+    padding: 220px 0px 0px 625px;
+    
+}
+//  ----pricing table---
+.pricing_table{
+    background-color: #eaf5f5;
+    padding: 20px;
+    width: 90%;
+    margin: $center;
+    .pricing_top{
+      text-align: center;
+      h2{
+          font-size: $head_fontSize;
+      }
+    }
+    .grid_table{
+       @extend %grid33;
+       margin: $center;
+        .grid_item{
+            background-color: white;
+            text-align: center;
+            .title{
+             @include grids(50%,50%, center,80%);
+             border-bottom:$title_border;
+            }
+            .body{
+                padding: 60px;
+                padding-top: 10px;
+             button{
+                @include button_style(5px,none,none);
+             }
+            }
+        }
+    }
+}
+// ----screenshots----
+.screenshots{
+    .screenshots_text{
+     text-align: center;
+    }
+    .screenshots_figure{
+        @extend %grid25;
+        margin: $center;
+       .feature_one{
+           width: 200px;
+           height: 357px;
+           @include backgroundImg ($figure_one,cover,none);
+       }
+       .feature_two{
+        @include backgroundImg ($figure_two,cover,none);
+        width: 200px;
+        height: 357px;
+       }
+    .feature_three{
+        @include backgroundImg ($figure_three,cover,none);
+        width: 200px;
+        height: 357px;  
+     }
+    .feature_four{
+        @include backgroundImg ($figure_four,cover,none);
+        width: 200px;
+        height: 357px;  
+     }
+    }
+}
+
+// ----testimonials----
+.testimonials
+
+    .top{
+        .text_top{
+            text-align: center;
+        }
+        .top_grid{
+            @include  grids(50%,50%, center,70%);
+            .grid_item{
+                @include  grids(20%,80%, start,70%);
+            }
+        }
+    }
+    // .download{
+
+    // }
+}
